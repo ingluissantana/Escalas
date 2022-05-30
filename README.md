@@ -27,6 +27,10 @@ dos notas repetidas al principio del string de la lista avisame y la reemplazas 
 
 Muchas gracias por tu ayuda.
 
+Link a la aplicacion:
+
+https://share.streamlit.io/ingluissantana/escalas/main/escalas.py
+
 #------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The idea is to create a program that when the user enters the note of their choice, the output would be all the scales related to that note.
@@ -51,3 +55,7 @@ is there a way in python to compare lists of strings? or how could I tell the pr
 two notes repeated at the beginning of the string of the list let me know and you replace it with another note that is in another list.
 
 Thank you very much for your help.
+
+Link to the app:
+
+https://share.streamlit.io/ingluissantana/escalas/main/escalas.py
