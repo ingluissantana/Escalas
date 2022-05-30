@@ -1,2 +1,2 @@
-import streamlit as st
+protobuf==3.20.1
 streamlit==1.8.1
