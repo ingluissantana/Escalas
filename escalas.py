@@ -1,6 +1,6 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
+#import numpy as np
+#import pandas as pd
 
 notas_5= ['A','A#','B','C','C#','D','D#','E','F','F#','G','G#']
 notas_5_bem = ['A','Bb','B','C','Db','D','Eb','E','F','Gb','G','Ab']
