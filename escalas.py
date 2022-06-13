@@ -37,7 +37,6 @@ def escalas(sel):
     escala_mel_menor = [x+y for x, y in zip(mel_menor, campo_mel_menor)]
     return escala_mayor, escala_lidia, escala_mixolidia, escala_menor, escala_dorica, escala_frigia, escala_locria, escala_arm_menor, escala_mel_menor
 
-
 st.header('Selecciona la nota que deseas:')
 
 st_nota = st.select_slider(
@@ -47,6 +46,5 @@ escala = escalas(st_nota)
 st.write('Escalas de ', st_nota)
 todas_escalas = escalas(st_nota)
 todas_escalas = pd.DataFrame(todas_escalas, index=['Mayor', 'Lidia', 'Mixolidio', 'Menor', 'Dorica', 'Frigia', 'Locria', 'Arm_menor', 'Mel_menor'], columns=['I','II','III','IV','V','VI','VII'])
-
 
 st.dataframe(data=todas_escalas, width=None, height=None)
