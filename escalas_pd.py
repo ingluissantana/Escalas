@@ -45,5 +45,8 @@ st_nota = st.select_slider(
      options=notas)
 escala = escalas(st_nota)
 st.write('Escalas de ', st_nota)
+todas_escalas = escalas(st_nota)
+todas_escalas = pd.DataFrame(todas_escalas, index=['Mayor', 'Lidia', 'Mixolidio', 'Menor', 'Dorica', 'Frigia', 'Locria', 'Arm_menor', 'Mel_menor'], columns=['I','II','III','IV','V','VI','VII'])
 
-st.code(escala.Show_all(), language="python")
+
+st.dataframe(data=todas_escalas, width=None, height=None)
