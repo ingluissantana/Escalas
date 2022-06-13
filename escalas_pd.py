@@ -43,7 +43,7 @@ st.header('Selecciona la nota que deseas:')
 st_nota = st.select_slider(
      'Nota',
      options=notas)
-escala = esc(st_nota)
+escala = escalas(st_nota)
 st.write('Escalas de ', st_nota)
 
 st.code(escala.Show_all(), language="python")
