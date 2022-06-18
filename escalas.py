@@ -57,6 +57,5 @@ todas_escalas.update(clean_dorica)
 todas_escalas.update(clean_frigia)
 todas_escalas.update(clean_mixolidio)
 todas_escalas.update(clean_locria)
-todas_escalas
 
 st.dataframe(data=todas_escalas, width=None, height=None)
