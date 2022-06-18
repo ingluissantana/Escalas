@@ -47,4 +47,18 @@ st.write('Escalas de ', st_nota)
 todas_escalas = escalas(st_nota)
 todas_escalas = pd.DataFrame(todas_escalas, index=['Mayor', 'Lidia', 'Mixolidio', 'Menor', 'Dorica', 'Frigia', 'Locria', 'Arm_menor', 'Mel_menor'], columns=['I','II','III','IV','V','VI','VII'])
 
+todas_escalas = escalas(sel)
+todas_escalas = pd.DataFrame(todas_escalas, index=['Mayor', 'Lidia', 'Mixolidio', 'Menor', 'Dorica', 'Frigia', 'Locria', 'Arm_menor', 'Mel_menor'], columns=['I','II','III','IV','V','VI','VII'])
+clean_lidia = pd.DataFrame(todas_escalas.loc['Mayor'].compare(todas_escalas.loc['Lidia'], keep_equal=False, keep_shape=True).loc[:,'other'].fillna('-')).rename(columns = {"other":"Lidia"}).T
+clean_mixolidio = pd.DataFrame(todas_escalas.loc['Mayor'].compare(todas_escalas.loc['Mixolidio'], keep_equal=False, keep_shape=True).loc[:,'other'].fillna('-')).rename(columns = {"other":"Mixolidio"}).T
+clean_dorica =  pd.DataFrame(todas_escalas.loc['Menor'].compare(todas_escalas.loc['Dorica'], keep_equal=False, keep_shape=True).loc[:,'other'].fillna('-')).rename(columns = {"other":"Dorica"}).T
+clean_frigia = pd.DataFrame(todas_escalas.loc['Menor'].compare(todas_escalas.loc['Frigia'], keep_equal=False, keep_shape=True).loc[:,'other'].fillna('-')).rename(columns = {"other":"Frigia"}).T
+clean_locria =  pd.DataFrame(todas_escalas.loc['Menor'].compare(todas_escalas.loc['Locria'], keep_equal=False, keep_shape=True).loc[:,'other'].fillna('-')).rename(columns = {"other":"Locria"}).T
+todas_escalas.update(clean_lidia)
+todas_escalas.update(clean_dorica)
+todas_escalas.update(clean_frigia)
+todas_escalas.update(clean_mixolidio)
+todas_escalas.update(clean_locria)
+todas_escalas
+
 st.dataframe(data=todas_escalas, width=None, height=None)
