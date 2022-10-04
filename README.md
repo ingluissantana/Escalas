@@ -4,4 +4,4 @@ The webpage created is working as follows: When the user enters the note of thei
 
 Link to the app:
 
-https://share.streamlit.io/ingluissantana/escalas/main/escalas.py
+https://bit.ly/3e6ZsbO
